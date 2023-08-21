@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "utility": "cpp",
+    "iostream": "cpp",
+    "xutility": "cpp",
+    "ostream": "cpp",
+    "xiosbase": "cpp",
+    "set": "cpp",
+    "random": "cpp",
+    "charconv": "cpp",
+    "functional": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "enabled"
+}
