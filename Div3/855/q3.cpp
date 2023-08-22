@@ -8,7 +8,20 @@
 using namespace std;
 
 void sol(){
-    
+    ll length;
+    cin >> length;
+    vi val(length), nonzero;
+    ll ans = 0;
+    FOR(i,0,length){
+        cin >> val[i];
+        if(val[i]) nonzero.push_back(val[i]);
+        SORT(nonzero);
+        if(val[i]==0 && !nonzero.empty()){
+            ans += nonzero.back();
+            nonzero.pop_back();
+        }
+    }
+    cout<<ans<<endl;
 }
 int main(){
     int test;

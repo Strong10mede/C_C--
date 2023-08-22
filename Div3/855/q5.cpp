@@ -8,24 +8,21 @@
 using namespace std;
 
 void sol(){
-    priority_queue<int> q;
     ll n;
+    string s;
     cin >> n;
-    ll val;
+    cin >> s;
+    s = '#' + s +'#';
     ll ans = 0;
-    FOR(i,0,n){
-        cin >> val;
-        if(val){
-            q.push(val);
+    for (int i = 2;i+1<=n;i++)
+    {
+        if(s[i-1]!=s[i+1]){
+            ans++;
         }
-        else{
-            if(q.size()){
-                ans+=q.top();
-                q.pop();
-            }
-        }
+        
     }
-    cout << ans << endl;
+    ans++;
+    cout<<ans<<endl;
 }
 int main(){
     int test;
