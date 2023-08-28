@@ -106,9 +106,7 @@ void selection(vector<int> &a){
         min_idx = i;
         for (int j = i + 1;j<a.size();j++){
             if(a[j]<a[min_idx]){
-                int temp = a[j];
-                a[j] = a[min_idx];
-                a[min_idx] = temp;
+                std::swap(a[j],a[min_idx]);
             }
         }
     }
