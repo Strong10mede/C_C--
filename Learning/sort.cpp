@@ -72,7 +72,9 @@ for (int i = 1; i < n;i++){
     }
 }
 
-void heap(vector<int> &a){};
+void heap(vector<int> &a){
+    
+};
 
 int partition(vector<int> &a, int l,int r){
     int pivot = a[r];
