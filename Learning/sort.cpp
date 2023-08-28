@@ -72,10 +72,6 @@ for (int i = 1; i < n;i++){
     }
 }
 
-void topological(vector<int>& a){
-
-}
-
 void heap(vector<int> &a){};
 
 int partition(vector<int> &a, int l,int r){
@@ -122,7 +118,7 @@ int main(){
         i++;
     }
 
-    cout << "Put choice 1 to 7 : ";
+    cout << "Put choice 1 to 6 : ";
     int c;
     cin >> c;
     switch(c){
@@ -142,13 +138,10 @@ int main(){
         heap(a);
         break;
         case 6:
-        topological(a);
-        break;
-        case 7:
         selection(a);
         break;
         default:
-        cout << "Please select 1 to 7";
+        cout << "Please select 1 to 6";
     }
 
     for(int i = 0; i <a.size(); i++){
