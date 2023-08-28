@@ -12,6 +12,7 @@ void bubble(vector<int> &a){
         }
     }
 }
+
 void mergeSort(vector<int> &a, int l,int mid, int r){
     int n1 = mid -l + 1;
     int n2 = r - mid;
@@ -78,7 +79,27 @@ void topological(vector<int>& a){
 }
 
 void heap(vector<int> &a){};
-void quick(vector<int> &a){};
+
+int partition(vector<int> &a, int l,int r){
+    int pivot = a[r];
+    int j = l;
+    for (int i = l; i < r; i++) {
+        if (a[i] < pivot) {
+            std::swap(a[i], a[j]);
+            j++;
+        }
+    }
+    std::swap(a[j], a[r]);
+    return j;
+}
+void quick(vector<int> &a,int l,int r){
+    if(l<r){
+        int pi = partition(a, l, r);
+        quick(a, l, pi - 1);
+        quick(a, pi + 1, r);
+    }
+};
+
 void selection(vector<int> &a){
     int j,min_idx;
     for (int i = 0;i<a.size()-1;i++){
@@ -92,6 +113,7 @@ void selection(vector<int> &a){
         }
     }
 };
+
 int main(){
     vector<int> a;
     int n;
@@ -115,7 +137,7 @@ int main(){
         merge(a,0,a.size()-1);
         break;
         case 3 :
-        quick(a);
+        quick(a,0,a.size()-1);
         break;
         case 4:
         insertion(a);
