@@ -8,7 +8,17 @@
 using namespace std;
 
 void sol(){
-    
+    string ans;
+   ll b[] = {0, 1, 2, 3, 5, 6, 7, 8, 9};
+    ll n;
+    cin >> n;
+	ans = "";
+	while (n) {
+		ans.push_back(b[n % 9] + '0');
+		n /= 9;
+	}
+	reverse(ans.begin(), ans.end());
+	cout << ans << "\n";
 }
 int main(){
     int test;

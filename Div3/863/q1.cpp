@@ -8,7 +8,22 @@
 using namespace std;
 
 void sol(){
-    
+    ll n,d;
+    string s;
+    cin>>n>>d;
+    cin >> s;
+    bool flag = true;
+    FOR(i,0,n){
+        if(d>(s[i]-'0') && flag==true){
+            cout << d;
+            flag = false;
+        }
+        cout << s[i];
+    }
+    if(flag)
+        cout << d;
+
+    cout << endl;
 }
 int main(){
     int test;

@@ -8,18 +8,29 @@
 using namespace std;
 
 void sol(){
-    ll n;
-    cin>>n;
-    vi val(n-1);
-    FOR(i,0,n-1){
-        cin>>val[i];
+    ll n, t;
+    cin>>n>>t;
+    vi a(n),b(n);
+    ll ent = 0;
+    ll k=-1;
+    FOR(i,0,n){
+        cin >> a[i];
     }
-    cout << val[0] << " ";
-    FOR(i,0,n-2){
-        cout << min(val[i], val[i + 1]) << " ";
+    FOR(i,0,n){
+        cin >> b[i];
     }
-    cout << val[n - 2];
-    cout<<endl;
+    FOR(i,0,n){
+        a[i] += i;
+        if(a[i]<=t){
+            if(ent<b[i])
+                k = i + 1;
+            ent = max(ent, b[i]);
+        }
+    }
+    
+
+    cout<<k<<endl;
+
 }
 int main(){
     int test;

@@ -10,16 +10,12 @@ using namespace std;
 void sol(){
     ll n;
     cin>>n;
-    vi val(n-1);
-    FOR(i,0,n-1){
-        cin>>val[i];
+    vi val(n);
+    FOR(i,0,n){
+        cin >> val[i];
     }
-    cout << val[0] << " ";
-    FOR(i,0,n-2){
-        cout << min(val[i], val[i + 1]) << " ";
-    }
-    cout << val[n - 2];
-    cout<<endl;
+    SORT(val);
+    cout << max((val[0] * val[1]), (val[n - 1] * val[n - 2])) << endl;
 }
 int main(){
     int test;

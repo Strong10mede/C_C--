@@ -8,7 +8,13 @@
 using namespace std;
 
 void sol(){
-    
+    ll n,a,b,c,d;
+    cin >> n >> a >> b >> c >> d;
+    a = a > n / 2 ? n - a + 1 : a;
+    b = b > n / 2 ? n - b + 1 : b;
+    c = c > n / 2 ? n - c + 1 : c;
+    d = d > n / 2 ? n - d + 1 : d;
+    cout << abs(min(a,b)-min(c,d)) << endl;
 }
 int main(){
     int test;
